@@ -67,12 +67,15 @@ run = function() {
    }
  } 
  
- print("Selecting the Standard Dev and Mean columns...")
+ print("Selecting the Standard Dev and Mean columns...") 
+ 
  testtrainsubjectactivity_mean_std = testtrainsubjectactivity[, meanstdcolumnnames]
  
  print("Creating a file...")
- write.table(testtrainsubjectactivity_mean_std, "allclean5.csv", sep=",")
 
+ #Create tidy data by calculating the mean for each of the column grouped by Activity and Subject
+ tidydata = testtrainsubjectactivity_mean_std %>% group_by(Activity, Subject) %>% summarise_each(funs(mean))
+ write.table(tidydata, "tidydata.txt", sep="\t", row.names = F)
  print("Completed!")
  
  
