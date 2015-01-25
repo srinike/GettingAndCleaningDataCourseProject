@@ -77,6 +77,5 @@ run = function() {
  tidydata = testtrainsubjectactivity_mean_std %>% group_by(Activity, Subject) %>% summarise_each(funs(mean))
  write.table(tidydata, "tidydata.txt", sep="\t", row.names = F)
  print("Completed!")
- 
- 
- }
+  
+}
