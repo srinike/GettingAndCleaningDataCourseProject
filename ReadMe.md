@@ -15,15 +15,15 @@ Example: Lets say the working directory is set to c:\sample. In this case, there
 Steps performed in cleaning the data
 ------------------------------------
 
-1.Read the observations from the X values of test and train data
-2.Read the y value of test and train data. This represents the type of activity
-3.Read the subject values of test and train data
-4.Combine (row bind) test and train data and store it in testtraindata
-5.Combine (row bind) test 'Y' and train 'Y' data store it in testtraindataY
-6.Combine the subject data for test and train data set
-7.Read the features file to get the list of column names
-8.Read the activities name. This has the description for each of the value in the testtraindataY
-9.Create a new activities dataframe by using the combining 'Y' values of test and train data and activities' name
-10.Column-bind the subject to the test train data
-11.Column-bind the activitydf (with activity name) to the testtrainsubject data
-12.Create a new dataframe with only those columns that has the mean or standard deviation in the column name
+*Read the observations from the X values of test and train data.
+*Read the y value of test and train data. This represents the type of activity.
+*Read the subject values of test and train data.
+*Combine (row bind) test and train data and store it in testtraindata.
+*Combine (row bind) test 'Y' and train 'Y' data store it in testtraindataY.
+*Combine the subject data for test and train data set.
+*Read the features file to get the list of column names.
+*Read the activities name. This has the description for each of the value in the testtraindataY.
+*Create a new activities dataframe by using the combining 'Y' values of test and train data and activities' name.
+*Column-bind the subject to the test train data.
+*Column-bind the activitydf (with activity name) to the testtrainsubject data.
+*Create a new dataframe with only those columns that has the mean or standard deviation in the column name.
